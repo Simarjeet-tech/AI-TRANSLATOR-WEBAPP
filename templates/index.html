@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title>AI Multi Language Translator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        width: 500px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        resize: none;
+      }
+
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      select {
+        border: 1px solid #ccc;
+      }
+
+      button {
+        background-color: #667eea;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #5a67d8;
+      }
+
+      .result-box {
+        margin-top: 20px;
+        padding: 10px;
+        background: #f3f3f3;
+        border-radius: 5px;
+        min-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>🌍 AI Multi Language Translator</h2>
+
+      <form method="post">
+        <textarea name="text" rows="4" placeholder="Enter text here...">
+{{ text }}</textarea
+        >
+
+        <select name="lang">
+          <option value="en-hi">English → Hindi</option>
+          <option value="hi-en">Hindi → English</option>
+          <option value="en-fr">English → French</option>
+          <option value="en-ur">English → Urdu</option>
+        </select>
+
+        <button type="submit">Translate</button>
+      </form>
+
+      <div class="result-box">
+        <strong>Result:</strong>
+        <p>{{ result }}</p>
+      </div>
+    </div>
+  </body>
+</html>
